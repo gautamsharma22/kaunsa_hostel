@@ -98,6 +98,30 @@ function AppAppBar({ mode, toggleColorMode }) {
               }}
             >
               <MenuItem
+                onClick={() => scrollToSection("features")}
+                sx={{ py: "6px", px: "12px" }}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                Features
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("services")}
+                sx={{ py: "6px", px: "12px" }}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                Services
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("testimonials")}
+                sx={{ py: "6px", px: "12px" }}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                  Testimonials
+                </Typography>
+              </MenuItem>
+              <MenuItem
                 onClick={() => scrollToSection("founders")}
                 sx={{ py: "6px", px: "12px"}}
               >
@@ -106,27 +130,11 @@ function AppAppBar({ mode, toggleColorMode }) {
                 </Typography>
               </MenuItem>
               <MenuItem
-                onClick={() => scrollToSection("testimonials")}
-                sx={{ py: "6px", px: "12px" }}
-              >
-                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
-                  Features
-                </Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={() => scrollToSection("highlights")}
+                onClick={() => scrollToSection("contact")}
                 sx={{ py: "6px", px: "12px" }}
               >
                 <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
                   Contact
-                </Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={() => scrollToSection("pricing")}
-                sx={{ py: "6px", px: "12px" }}
-              >
-                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
-                  Pricing
                 </Typography>
               </MenuItem>
               <MenuItem

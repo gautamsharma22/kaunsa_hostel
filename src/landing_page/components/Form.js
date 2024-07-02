@@ -2,15 +2,29 @@ import React from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 const Form = () => {
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    try {
+      const url = "https://script.google.com/macros/s/AKfycbyZSRmr-rPOB5xtZDDaIxqQiM9TrJq1OKtoCsNzggAHZmEq5UxG0ZW2Mlee1z7qZ4qOmQ/exec";
+      const response = await fetch(url, {
+        method: 'POST',
+        body: data,
+      });
+
+      if (response.ok) {
+        alert("Query Submitted will contact you back!");
+      } else {
+        alert("Failed to submit form.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("An error occurred while submitting the form.");
+    }
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -18,7 +32,7 @@ const Form = () => {
   };
   return (
     <Box
-      id="highlights"
+      id="contact"
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -54,7 +68,7 @@ const Form = () => {
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="given-name"
-                name="fullName"
+                name="Full Name"
                 required
                 fullWidth
                 id="fullName"
@@ -68,7 +82,7 @@ const Form = () => {
                 fullWidth
                 id="collegeName"
                 label="College Name"
-                name="collegeName"
+                name="College Name"
                 autoComplete="college"
               />
             </Grid>
@@ -78,7 +92,7 @@ const Form = () => {
                 fullWidth
                 id="contact"
                 label="Contact Number"
-                name="contact"
+                name="Contact"
                 autoComplete="contact"
               />
             </Grid>
@@ -86,7 +100,7 @@ const Form = () => {
               <TextField
                 required
                 fullWidth
-                name="location"
+                name="City"
                 label="City Name"
                 type="city"
                 id="city"
@@ -101,7 +115,7 @@ const Form = () => {
             variant="contained"
             sx={{ mt: 2, p: 1.5, fontSize: "0.8rem", fontWeight: "bold" }}
           >
-            Sign Up
+            Request Callback
           </Button>
         </Box>
       </Container>

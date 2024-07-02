@@ -7,30 +7,29 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import { useTheme } from "@mui/system";
-
+import User1 from "../../images/testimonial/user1.jpeg"
+import User2 from "../../images/testimonial/user2.jpeg"
+import User3 from "../../images/testimonial/user3.jpeg"
 const userTestimonials = [
   {
-    avatar: <Avatar alt="Aryan Gupta" sx={{ bgcolor: "error.light" }} />,
-    name: "Aryan Gupta",
+    avatar: <Avatar alt="Aryan Gupta" src={User1} />,
+    name: "Aarav Gupta",
     occupation: "Student @NIU",
     testimonial:
       "Using this website was a game-changer for me. It saved me time and effort by offering diverse options that matched my budget and preferences perfectly. Absolutely fantastic service!",
   },
   {
     avatar: (
-      <Avatar alt="Anand Kumar" sx={{ bgcolor: "primary.main" }} >
-        A
-      </Avatar>
+      <Avatar alt="Bhoomi Dagore" src={User2} />
     ),
-    name: "Anand Kumar",
-    occupation: "Student @Galgotia",
+    name: "Bhoomi Dagore",
+    occupation: "Student @NIU",
     testimonial:
       "I highly recommend this hostel search platform! It provided comprehensive information and genuine reviews, ensuring I found a safe and comfortable place to stay during my college days.",
   },
   {
-    avatar: <Avatar alt="Shreya Jaiswal" sx={{ bgcolor: "secondary.main" }} />,
-    name: "Shreya Jaiswal",
+    avatar: <Avatar alt="Anjali Singh" src={User3} />,
+    name: "Anjali Singh",
     occupation: "Student @NIU",
     testimonial:
       "Thanks to this website, finding the perfect hostel was a breeze! The user-friendly interface and detailed listings made my search efficient and stress-free.",
