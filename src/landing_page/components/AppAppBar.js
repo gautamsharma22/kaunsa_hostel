@@ -140,10 +140,11 @@ function AppAppBar({ mode, toggleColorMode }) {
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
               <Button
                 color="warning"
-                variant="contained"
+                variant="outlined"
                 size="medium"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-in/"
+                sx={{ p: 1, fontWeight: "bold" }}
+                href="https://wa.me/+918595948615"
                 target="_blank"
               >
                 Contact Us
@@ -202,7 +203,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                       color="warning"
                       variant="contained"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
+                      href="https://wa.me/+918595948615"
                       target="_blank"
                       sx={{ width: "100%" }}
                     >
