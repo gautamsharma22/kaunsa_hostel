@@ -13,7 +13,7 @@ const userTestimonials = [
   {
     avatar: <Avatar alt="Aryan Gupta" sx={{ bgcolor: "error.light" }} />,
     name: "Aryan Gupta",
-    occupation: "Senior Engineer",
+    occupation: "Student @NIU",
     testimonial:
       "Using this website was a game-changer for me. It saved me time and effort by offering diverse options that matched my budget and preferences perfectly. Absolutely fantastic service!",
   },
@@ -24,14 +24,14 @@ const userTestimonials = [
       </Avatar>
     ),
     name: "Anand Kumar",
-    occupation: "Lead Product Designer",
+    occupation: "Student @Galgotia",
     testimonial:
       "I highly recommend this hostel search platform! It provided comprehensive information and genuine reviews, ensuring I found a safe and comfortable place to stay during my college days.",
   },
   {
     avatar: <Avatar alt="Shreya Jaiswal" sx={{ bgcolor: "secondary.main" }} />,
     name: "Shreya Jaiswal",
-    occupation: "CTO",
+    occupation: "Student @NIU",
     testimonial:
       "Thanks to this website, finding the perfect hostel was a breeze! The user-friendly interface and detailed listings made my search efficient and stress-free.",
   },
