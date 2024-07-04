@@ -84,14 +84,14 @@ export default function Footer() {
             color: "text.secondary",
           }}
         >
-          {/* <IconButton
+          <IconButton
             color="inherit"
-            href="https://facebook.com/mui"
-            aria-label="GitHub"
+            href="https://www.facebook.com/share/TrKwtSkBawDWCKLM"
+            aria-label="Facebook"
             sx={{ alignSelf: "center" }}
           >
             <FacebookIcon />
-          </IconButton> */}
+          </IconButton>
           <IconButton
             color="inherit"
             href="https://www.instagram.com/kaunsahostel"

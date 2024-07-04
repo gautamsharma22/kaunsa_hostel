@@ -14,7 +14,7 @@ const userTestimonials = [
   {
     avatar: <Avatar alt="Aryan Gupta" src={User1} />,
     name: "Aarav Gupta",
-    occupation: "Student @NIU",
+    occupation: "Student @Galgotias University",
     testimonial:
       "Using this website was a game-changer for me. It saved me time and effort by offering diverse options that matched my budget and preferences perfectly. Absolutely fantastic service!",
   },

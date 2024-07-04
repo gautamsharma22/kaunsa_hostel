@@ -13,8 +13,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image1 from "../../images/1.jpeg";
 import Image2 from "../../images/2.jpeg";
-import Image3 from "../../images/3.jpeg";
-import Image4 from "../../images/4.jpeg";
 import Profile from "../../images/profile.jpeg";
 
 const founder = {
@@ -22,8 +20,8 @@ const founder = {
   name: "Aman Jha",
   subheader: "CEO",
   description:
-    "Aman Jha is a dynamic entrepreneur currently pursuing a BBA at Noida International University. Demonstrating a keen business acumen early on, Aman founded Youthpreneur.in, a platform dedicated to offering comprehensive digital marketing courses to students. Recognizing the challenges students face in finding quality accommodations, Aman also established Kaunsahostel, a service aimed at helping students secure the best hostel and PG accommodations.",
-  images: [Image3,Image2,Image1,Image4],
+    "Aman Jha, Founder & CEO of Kaunshostel is a dynamic entrepreneur, demonstrating a keen business acumen early on, Aman founded Youthpreneur.in, a platform dedicated to offering comprehensive digital marketing courses to students. Recognizing the challenges students face in finding quality accommodations, Aman also established Kaunsahostel, a service aimed at helping students secure the best hostel and PG accommodations.",
+  images: [Image2,Image1],
   imageSrc: Profile,
 };
 

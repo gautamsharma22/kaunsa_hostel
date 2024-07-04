@@ -10,10 +10,10 @@ import ImageGallery from "./components/ImageGallery";
 import Founder from "./components/Founder";
 import Features from "./components/Features";
 import Testimonials from "./components/Testimonials";
-import Form from "./components/Form";
+import Form from "./components/Form/FormComp";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
-
+import ContactModal from "./components/ContactModal";
 export default function LandingPage() {
   const [mode, setMode] = React.useState("dark");
   const defaultTheme = createTheme({ palette: { mode } });
@@ -27,7 +27,8 @@ export default function LandingPage() {
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
       <Box sx={{ bgcolor: "background.default" }}>
-      <Divider />
+        <Divider />
+        <ContactModal/>
         <Features />
         <Divider />
         <Services />
@@ -38,9 +39,9 @@ export default function LandingPage() {
         <Divider />
         <Form />
         <Divider />
-        <FAQ />
-        <Divider />
         <ImageGallery />
+        <Divider />
+        <FAQ />
         <Divider />
         <Footer />
       </Box>
