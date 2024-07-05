@@ -189,21 +189,48 @@ function AppAppBar({ mode, toggleColorMode }) {
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection("features")}>
-                    Features
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("testimonials")}>
-                    Testimonials
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("highlights")}>
-                    Highlights
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("pricing")}>
-                    Pricing
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("faq")}>
-                    FAQ
-                  </MenuItem>
+                  <MenuItem
+                onClick={() => scrollToSection("features")}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                Features
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("services")}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                Services
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("testimonials")}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                  Testimonials
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("founders")}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                  About
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("contact")}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                  Contact
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => scrollToSection("faq")}
+              >
+                <Typography variant="body1" color="text.primary" sx={{fontWeight:"bold"}}>
+                  FAQ
+                </Typography>
+              </MenuItem>
                   <Divider />
                   <MenuItem>
                     <Button
