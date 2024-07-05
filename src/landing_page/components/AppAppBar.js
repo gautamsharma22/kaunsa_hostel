@@ -51,7 +51,7 @@ function AppAppBar({ mode, toggleColorMode }) {
           mt: 2,
         }}
       >
-        <Container maxWidth="lg">
+        <Container>
           <Toolbar
             variant="regular"
             sx={(theme) => ({
@@ -171,7 +171,6 @@ function AppAppBar({ mode, toggleColorMode }) {
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                 <Box
                   sx={{
-                    minWidth: "60dvw",
                     p: 2,
                     backgroundColor: "background.paper",
                     flexGrow: 1,
@@ -230,7 +229,6 @@ function AppAppBar({ mode, toggleColorMode }) {
 
 AppAppBar.propTypes = {
   mode: PropTypes.oneOf(["dark", "light"]).isRequired,
-  toggleColorMode: PropTypes.func.isRequired,
 };
 
 export default AppAppBar;

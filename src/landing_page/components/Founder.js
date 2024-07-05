@@ -21,7 +21,7 @@ const founder = {
   subheader: "CEO",
   description:
     "Aman Jha, Founder & CEO of Kaunshostel is a dynamic entrepreneur, demonstrating a keen business acumen early on, Aman founded Youthpreneur.in, a platform dedicated to offering comprehensive digital marketing courses to students. Recognizing the challenges students face in finding quality accommodations, Aman also established Kaunsahostel, a service aimed at helping students secure the best hostel and PG accommodations.",
-  images: [Image2,Image1],
+  images: [Image2, Image1],
   imageSrc: Profile,
 };
 
@@ -38,14 +38,14 @@ export default function Founder() {
         alignItems: "center",
         gap: { xs: 3, sm: 6 },
       }}
+      data-aos="zoom-in-up"
+      data-aos-delay="300"
     >
       <Box
         sx={{
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
+          width: { xs: "90%", sm: "70%", md: "60%" }, // Adjusted width for responsiveness
+          textAlign: { xs: "center", sm: "left", md: "center" },
         }}
-        data-aos="zoom-in-up"
-        data-aos-delay="300"
       >
         <Typography
           component="h2"
@@ -60,8 +60,8 @@ export default function Founder() {
           living space without any worries.
         </Typography>
       </Box>
-      <Grid container spacing={3} alignItems="stretch" justifyContent="center">
-        <Grid item xs={12} md={4} data-aos="zoom-out-left" data-aos-delay="600">
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12} md={4}>
           <Card
             sx={{
               p: 2,
@@ -109,7 +109,7 @@ export default function Founder() {
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "baseline",
+                  alignItems: "center",
                   justifyContent: "center",
                   mb: 2,
                   color: "grey.50",
@@ -128,25 +128,16 @@ export default function Founder() {
                   borderColor: "grey.500",
                 }}
               />
-              <Box
-                key={founder.name}
+              <Typography
+                component="text"
+                variant="body1"
                 sx={{
-                  py: 1,
-                  display: "flex",
-                  gap: 1.5,
-                  alignItems: "center",
+                  color: "grey.200",
+                  textAlign: "center",
                 }}
               >
-                <Typography
-                  component="text"
-                  variant="subtitle1"
-                  sx={{
-                    color: "grey.200",
-                  }}
-                >
-                  {founder.description}
-                </Typography>
-              </Box>
+                {founder.description}
+              </Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -178,7 +169,11 @@ export default function Founder() {
               >
                 {founder.images.map((image, index) => (
                   <div key={index}>
-                    <img src={image} alt={`Slide ${index}`} style={{objectFit:'contain', maxHeight:'500px'}}/>
+                    <img
+                      src={image}
+                      alt={`Slide ${index}`}
+                      style={{ objectFit: "contain", maxHeight: "500px" }}
+                    />
                   </div>
                 ))}
               </Carousel>

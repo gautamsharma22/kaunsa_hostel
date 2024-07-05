@@ -44,7 +44,7 @@ export default function LandingPage() {
         <FAQ />
         <Divider />
         <Footer />
-      </Box>
+      </Box> 
     </ThemeProvider>
   );
 }
