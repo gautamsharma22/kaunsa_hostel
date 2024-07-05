@@ -12,11 +12,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "./ToggleColorMode";
-import LogoIMG from "../../images/logo.png";
+import LogoIMG from "../../images/logo-only-text.png";
 const logoStyle = {
-  width: "140px",
-  height: "auto",
+  height: "1rem",
   cursor: "pointer",
+  p:2
 };
 
 function AppAppBar({ mode, toggleColorMode }) {
@@ -81,6 +81,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 alignItems: "center",
                 ml: "-18px",
                 px: 0,
+                p:2
               }}
             >
               <img
@@ -88,7 +89,6 @@ function AppAppBar({ mode, toggleColorMode }) {
                 style={logoStyle}
                 alt="logo of kaunsa hostel"
               />
-              <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
             </Box>
             <Box
               sx={{
