@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Dialog from "@mui/material/Dialog";
 import Form from "./Form/ModalForm"
-const ContactModal = () => {
-    const [open, setOpen] = useState(false);
-  
+const ContactModal = (props) => {
+  const [open, setOpen] = useState(false);
+  const { handleFormSubmitted } = props;
     useEffect(() => {
       const timer = setTimeout(() => {
         setOpen(true);
@@ -18,7 +18,7 @@ const ContactModal = () => {
   
     return (
       <Dialog open={open} onClose={handleClose}>
-        <Form handleClose={handleClose} />
+        <Form handleClose={handleClose} handleFormSubmitted={handleFormSubmitted}/>
       </Dialog>
     );
   };

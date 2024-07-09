@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -17,7 +17,7 @@ import ContactModal from "./components/ContactModal";
 export default function LandingPage() {
   const [mode, setMode] = React.useState("dark");
   const defaultTheme = createTheme({ palette: { mode } });
-
+  const [formSubmitted, handleFormSubmitted] = useState(false);
   const toggleColorMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
@@ -28,7 +28,7 @@ export default function LandingPage() {
       <Hero />
       <Box sx={{ bgcolor: "background.default" }}>
         <Divider />
-        <ContactModal/>
+        <ContactModal handleFormSubmitted={handleFormSubmitted}/>
         <Features />
         <Divider />
         <Services />
@@ -37,7 +37,7 @@ export default function LandingPage() {
         <Divider />
         <Founder />
         <Divider />
-        <Form />
+        <Form formSubmitted={formSubmitted} handleFormSubmitted={handleFormSubmitted}/>
         <Divider />
         <ImageGallery />
         <Divider />

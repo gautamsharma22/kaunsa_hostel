@@ -1,26 +1,25 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Typography from "@mui/material/Typography";
-const ModalForm = ({ handleClose, handleFormSubmitted }) => {
+const ActiveForm = (props) => {
+  const { handleFormSubmitted } = props;
+  const [buttonActive, setButtonActive] = useState(true);
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    setButtonActive(false);
     if (!event.currentTarget.checkValidity()) {
       alert("Please fill in all required fields in form.");
+      setButtonActive(true);
       return;
     }
-
     const data = new FormData(event.currentTarget);
     try {
       const url =
@@ -31,9 +30,7 @@ const ModalForm = ({ handleClose, handleFormSubmitted }) => {
       });
 
       if (response.ok) {
-        alert("Query Submitted! We will contact you back.");
-        handleFormSubmitted(true);
-        handleClose();
+        alert("Query Submitted will contact you back!");
       } else {
         alert("Failed to submit form.");
       }
@@ -41,27 +38,42 @@ const ModalForm = ({ handleClose, handleFormSubmitted }) => {
       console.error("Error submitting form:", error);
       alert("An error occurred while submitting the form.");
     }
+    handleFormSubmitted(true);
   };
-
   return (
-    <Box>
-      <DialogTitle>
-        <Typography
-          variant="h4"
+    <Box
+      id="contact"
+      sx={{
+        pt: { xs: 4, sm: 12 },
+        pb: { xs: 8, sm: 16 },
+      }}
+    >
+      <Container
+        sx={{
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: { xs: 3, sm: 6 },
+        }}
+      >
+        <Box
+          sx={{
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" },
+          }}
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
         >
-          Hostel Bookings are Live!
-        </Typography>
-      </DialogTitle>
-      <DialogContent>
-        <DialogContentText>
-          <Typography
-            variant="h5"
-            gutterBottom
-          >
-            Book your Dream Hostel Now.
+          <Typography component="h2" variant="h3" gutterBottom>
+            Get In Touch
           </Typography>
-        </DialogContentText>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 2 }}>
+          <Typography variant="body1">
+            Complete the form and we'll promptly respond to begin your search
+            for a hostel.
+          </Typography>
+        </Box>
+        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -128,15 +140,20 @@ const ModalForm = ({ handleClose, handleFormSubmitted }) => {
               />
             </Grid>
           </Grid>
-          <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
-            <Button type="submit" color="primary" variant="contained">
-              Contact Now
-            </Button>
-          </DialogActions>
+          <Button
+            disabled={!buttonActive}
+            type="submit"
+            fullWidth
+            color="warning"
+            variant="contained"
+            sx={{ mt: 2, p: 1.5, fontSize: "0.8rem", fontWeight: "bold" }}
+          >
+            Request Callback
+          </Button>
         </Box>
-      </DialogContent>
+      </Container>
     </Box>
   );
 };
-export default ModalForm;
+
+export default ActiveForm;
