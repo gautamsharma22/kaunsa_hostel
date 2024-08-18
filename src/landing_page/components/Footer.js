@@ -14,7 +14,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const logoStyle = {
   width: "auto",
-  height: "100px",
+  height: "60px",
 };
 
 function Copyright() {
@@ -56,9 +56,7 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
-            <Box sx={{ ml: "-15px" }}>
               <img src={LogoIMG} style={logoStyle} alt="logo of sitemark" />
-            </Box>
           </Box>
         </Box>
       </Box>

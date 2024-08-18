@@ -11,10 +11,10 @@ import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
-import ToggleColorMode from "./ToggleColorMode";
+// import ToggleColorMode from "./ToggleColorMode";
 import LogoIMG from "../../images/logo-only-text.png";
 const logoStyle = {
-  height: "1rem",
+  height: "2rem",
   cursor: "pointer",
   p:2
 };
@@ -145,7 +145,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                   FAQ
                 </Typography>
               </MenuItem>
-              <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
+              {/* <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} /> */}
               <Button
                 color="warning"
                 variant="outlined"
@@ -176,7 +176,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     flexGrow: 1,
                   }}
                 >
-                  <Box
+                  {/* <Box
                     sx={{
                       display: "flex",
                       flexDirection: "column",
@@ -188,7 +188,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                       mode={mode}
                       toggleColorMode={toggleColorMode}
                     />
-                  </Box>
+                  </Box> */}
                   <MenuItem
                 onClick={() => scrollToSection("features")}
               >

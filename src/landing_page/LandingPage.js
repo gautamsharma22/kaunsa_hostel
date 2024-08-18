@@ -15,7 +15,7 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
 export default function LandingPage() {
-  const [mode, setMode] = React.useState("dark");
+  const [mode, setMode] = React.useState("light");
   const defaultTheme = createTheme({ palette: { mode } });
   const [formSubmitted, handleFormSubmitted] = useState(false);
   const toggleColorMode = () => {
